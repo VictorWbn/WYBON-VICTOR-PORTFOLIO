@@ -1,0 +1,271 @@
+/* Style global pour les éléments de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px; /* Taille de police par défaut */
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Styles du Header et Menu */
+header {
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem; /* Taille uniforme pour les liens de navigation */
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #fa7726;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #fff;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Bouton d'appel à l'action */
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    color: #fff;
+    background-color: #fa7726;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e66a1f;
+}
+
+/* Sections Presentation et Presentation-Reverse */
+.presentation, .presentation-reverse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+}
+
+.presentation-reverse {
+    flex-direction: row-reverse;
+    background-color: #fff;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.illustration {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+    flex: 1;
+}
+
+/* Titres et Sous-titres */
+h1, .hero h1, .projects h1, .cv h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2, .presentation h2, .text-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Paragraphes */
+.text-container p, .presentation p, .projects p, .cv p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fa7726;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Projets et CV Sections */
+.projects, .cv {
+    padding: 4rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Liste de Projets */
+.projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projects ul li {
+    font-size: 1.1rem;
+    color: #555;
+    padding: 0.5rem 0;
+}
+
+.projects ul li strong {
+    color: #333;
+}
+
+/* Section Image du CV */
+.cv-image {
+    margin-top: 2rem;
+}
+
+.cv-image img {
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour la section de chaque Projet individuel */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project.reverse .project-image {
+    order: 1;
+}
+
+.project-image {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 1.5rem;
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-details {
+    text-align: center;
+}
+
+.project-link {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.project-link .cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    color: #fff;
+    background-color: #fa7726;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.project-link .cta-button:hover {
+    background-color: #e66a1f;
+}
+
+/* Réglages Responsifs */
+@media (max-width: 768px) {
+    .presentation, .presentation-reverse {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.2rem;
+    }
+
+    .text-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+}
