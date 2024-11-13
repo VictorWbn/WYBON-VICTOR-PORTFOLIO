@@ -1,4 +1,3 @@
-/* Style global pour les éléments de base */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    font-size: 16px; /* Taille de police par défaut */
+    font-size: 16px; 
 }
 
 p {
@@ -19,7 +18,6 @@ p {
     line-height: 1.8;
 }
 
-/* Styles du Header et Menu */
 header {
     background-color: #333;
     padding: 1rem 0;
@@ -39,7 +37,7 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem; /* Taille uniforme pour les liens de navigation */
+    font-size: 1rem;
     transition: color 0.3s ease;
 }
 
@@ -47,7 +45,6 @@ header nav ul li a:hover {
     color: #fa7726;
 }
 
-/* Hero Section */
 .hero {
     background-color: #fff;
     padding: 4rem 1.5rem;
@@ -67,7 +64,6 @@ header nav ul li a:hover {
     margin: 0 auto 1.5rem;
 }
 
-/* Bouton d'appel à l'action */
 .cta-button {
     display: inline-block;
     padding: 0.8rem 1.5rem;
@@ -83,7 +79,6 @@ header nav ul li a:hover {
     background-color: #e66a1f;
 }
 
-/* Sections Presentation et Presentation-Reverse */
 .presentation, .presentation-reverse {
     display: flex;
     align-items: center;
@@ -115,7 +110,6 @@ header nav ul li a:hover {
     flex: 1;
 }
 
-/* Titres et Sous-titres */
 h1, .hero h1, .projects h1, .cv h1 {
     font-size: 2.5rem;
     color: #333;
@@ -130,14 +124,12 @@ h2, .presentation h2, .text-container h2 {
     text-align: left;
 }
 
-/* Paragraphes */
 .text-container p, .presentation p, .projects p, .cv p {
     font-size: 1rem;
     color: #555;
     line-height: 1.8;
 }
 
-/* Pied de page */
 footer {
     background-color: #333;
     color: #fff;
@@ -156,7 +148,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Projets et CV Sections */
 .projects, .cv {
     padding: 4rem 1.5rem;
     max-width: 800px;
@@ -167,7 +158,6 @@ footer a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Liste de Projets */
 .projects ul {
     list-style-type: none;
     padding: 0;
@@ -183,7 +173,6 @@ footer a:hover {
     color: #333;
 }
 
-/* Section Image du CV */
 .cv-image {
     margin-top: 2rem;
 }
@@ -194,7 +183,6 @@ footer a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Styles pour la section de chaque Projet individuel */
 .project {
     display: flex;
     flex-direction: column;
@@ -246,7 +234,6 @@ footer a:hover {
     background-color: #e66a1f;
 }
 
-/* Réglages Responsifs */
 @media (max-width: 768px) {
     .presentation, .presentation-reverse {
         flex-direction: column;
