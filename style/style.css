@@ -132,21 +132,26 @@ h2, .presentation h2, .text-container h2 {
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: #fff; 
     text-align: center;
     padding: 1.5rem;
     font-size: 0.9rem;
 }
 
+footer p {
+    color: #fff;
+}
+
 footer a {
-    color: #fa7726;
+    color: #fa7726; 
     text-decoration: none;
     font-weight: 500;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline; 
 }
+
 
 .projects, .cv {
     padding: 4rem 1.5rem;
