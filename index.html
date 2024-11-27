@@ -8,6 +8,24 @@
     <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slideElements = document.querySelectorAll('.slide-in');
+
+        const handleScroll = () => {
+            slideElements.forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); 
+    });
+</script>
+
 <body>
     <header>
         <nav>
@@ -23,33 +41,90 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero section slide-in slide-in-right">
             <h1>Bienvenue sur mon Portfolio</h1>
-            <p><strong>WYBON Victor</strong> étudiant de <strong>BUT Informatique</strong> en 2ème année à l'IUT de <strong>Lens</strong>. Je suis Passionné par le développement logiciel et les technologies, je vous invite à découvrir mes projets personnels et scolaires.</p>
-            <p>Il se trouve que je suis actuellement en recherche de <strong>stage</strong> pour la période <strong>Avril / Juin 2024!</strong> N'hésitez pas à me contacter si nécessaire pour toutes demande d'information.</p>
+            <p><strong>WYBON Victor</strong> étudiant de <strong>BUT Informatique</strong> en 2ème année à l'IUT de <strong>Lens</strong>. Je suis passionné par l'informatique depuis mon plus jeune age, que cela soit logiciel ou matériel! Je vous invite à découvrir mes projets personnels et scolaires.</p>
+            <p>Il se trouve que je suis actuellement en recherche de <strong>stage</strong> pour la période <strong>Avril - Juin 2024! </strong> N'hésitez pas à me contacter si nécessaire pour toutes demande d'information.</p>
             <a href="page/projets.html" class="cta-button">Voir mes projets</a>
-        </section>
-
-        <div class="presentation">
+        </section> 
+    
+        <div class="presentation section slide-in slide-in-left">
             <div class="image-container">
                 <img src="images/presentation1.jpg" alt="Illustration de profil" class="illustration">
             </div>
             <div class="text-container">
                 <h2>Qui suis-je ?</h2>
-                <p>Passionné d’informatique depuis mon plus jeune âge, j’ai toujours été attiré par la technologie et ses fonctionnements. Pour l’anecdote, dès l'école primaire, je démontais des magnétoscopes et lecteurs de cassettes hors-service pour comprendre leur mécanisme. Fasciné par l’informatique et le monde des jeux vidéo, j’ai alors décidé de poursuivre cette voie en choisissant un parcours scolaire orienté vers les sciences et le numérique, avec un bac spécialité Mathématiques et NSI (Numérique et Sciences Informatiques).</p>
+                <p style="max-width: 70%;">Passionné par l'informatique, les jeux vidéo, l'astrologie, la minéralogie, le badminton, le rugby, les Lego, la science-fiction, et bien d'autres domaines encore, j'aime explorer des univers variés et riches!</p>
             </div>
         </div>
         
-        <div class="presentation-reverse">
+        <div class="presentation-reverse section slide-in-right">
             <div class="text-container">
                 <h2>Expériences et compétences</h2>
-                <p>Au fil de mes études, j’ai travaillé sur de nombreux projets, touchant au développement d’applications en Java, Python, ainsi qu'au développement web. Ces projets m’ont permis d’acquérir un éventail de compétences solides dans divers domaines du développement logiciel. Grâce à cette expérience polyvalente, je dispose aujourd’hui de bases techniques me permettant d’aborder différents environnements de développement avec adaptabilité et efficacité.</p>
+                <p style="max-width: 70%;">Au fil de mes études, j’ai travaillé sur de nombreux projets, touchant au développement d’applications en Java, Python, ainsi qu'au développement web. Cela m'a permis d’acquérir des compétences solides dans divers domaines du développement logiciel. Grâce à ces expériences, je dispose aujourd’hui de bases techniques me permettant d’aborder différents environnements de développement avec efficacité.</p>
             </div>
             <div class="image-container">
                 <img src="images/presentation2.jpg" alt="Illustration d'expériences" class="illustration">
             </div>
         </div>
     </main>
+
+    <section class="competences section slide-in slide-in-left">
+        <div class="competence-category slide-in">
+            <h3>Langages de programmation</h3>
+            <div class="competence-logos">
+                <img src="images/icon/java.png" alt="Java" width="48" height="48"/>
+                <img src="images/icon/python.png" alt="Python" width="48" height="48"/>
+                <img src="images/icon/cobol.png" alt="Cobol" width="48" height="48"/>
+                <img src="images/icon/csharp.png" alt="Csharp" width="48" height="48"/>
+            </div>
+        </div>
+        <div class="competence-category slide-in slide-in-right">
+            <h3>Développement web</h3>
+            <div class="competence-logos">
+                <img src="images/icon/html.png" alt="HTML" width="48" height="48"/>
+                <img src="images/icon/css.png" alt="CSS" width="48" height="48"/>
+                <img src="images/icon/javascript.png" alt="JavaScript" width="48" height="48"/>
+                <img src="images/icon/php.png" alt="PHP" width="48" height="48"/>
+                <img src="images/icon/laravel.png" alt="Laravel" width="48" height="48"/>
+                <img src="images/icon/flask.png" alt="Flask" width="48" height="48"/>
+            </div>
+        </div>
+        <div class="competence-category slide-in slide-in-left">
+            <h3>Bases de données</h3>
+            <div class="competence-logos">
+                <img src="images/icon/psql.png" alt="PostgreSQL" width="48" height="48"/>
+                <img src="images/icon/sqlite.png" alt="SQLite" width="48" height="48"/>
+            </div>
+        </div>
+        <div class="competence-category slide-in slide-in-right">
+            <h3>Environnements et outils</h3>
+            <div class="competence-logos">
+                <img src="images/icon/bash.png" alt="Bash" width="48" height="48"/>
+                <img src="images/icon/git.png" alt="Git" width="48" height="48"/>
+                <img src="images/icon/nginx.png" alt="NGINX" width="48" height="48"/>
+                <img src="images/icon/apache.png" alt="Apache" width="48" height="48"/>
+            </div>
+        </div>
+        <div class="competence-category slide-in slide-in-left">
+            <h3>Systèmes d'exploitation</h3>
+            <div class="competence-logos">
+                <img src="images/icon/fedora.png" alt="Fedora" width="48" height="48"/>
+                <img src="images/icon/endeavouros.png" alt="EndeavourOS" width="48" height="48"/>
+                <img src="images/icon/windows.png" alt="Windows" width="48" height="48"/>
+            </div>
+        </div>
+        <div class="competence-category slide-in slide-in-right">
+            <h3>Environnements de développement</h3>
+            <div class="competence-logos">
+                <img src="images/icon/eclipse.png" alt="Eclipse" width="48" height="48"/>
+                <img src="images/icon/intellijidea.png" alt="IntelliJ IDEA" width="48" height="48"/>
+                <img src="images/icon/phpstorm.png" alt="PHPStorm" width="48" height="48"/>
+                <img src="images/icon/pycharm.png" alt="PyCharm" width="48" height="48"/>
+                <img src="images/icon/vscode.png" alt="VS Code" width="48" height="48"/>
+            </div>
+        </div>
+    </section>
     
     <footer>
         <p>&copy; 2024 - WYBON Victor - Trouvez-moi sur <a href="https://github.com/VictorWbn" target="_blank">GitHub</a> et <a href="https://www.linkedin.com/in/wybon-victor/" target="_blank">LinkedIn</a> !</p>

@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="../style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slideElements = document.querySelectorAll('.slide-in');
+
+        const handleScroll = () => {
+            slideElements.forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); 
+    });
+</script>
 <body>
     <header>
         <nav>
@@ -27,7 +44,7 @@
             <h1>Mes Projets</h1>
             <p>Voici une sélection de mes projets, réalisés dans le cadre de mes études et en dehors :</p>
 
-            <div class="project">
+            <div class="project slide-in slide-in-right">
                 <div class="project-image">
                     <img src="../images/Gems&Stones.png" alt="Image du projet Gems&Stones">
                 </div>
@@ -41,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="project">
+            <div class="project slide-in slide-in-left">
                 <div class="project-image">
                     <img src="../images/WINTER1944.png" alt="Image du projet WINTER 1944">
                 </div>
@@ -56,7 +73,7 @@
                 </div>
             </div>
 
-            <div class="project">
+            <div class="project slide-in slide-in-right">
                 <div class="project-image">
                     <img src="../images/puissance4.jpg" alt="Image du projet Puissance 4">
                 </div>
@@ -69,7 +86,7 @@
                 </div>
             </div>
 
-            <div class="project">
+            <div class="project slide-in slide-in-left">
                 <div class="project-image">
                     <img src="../images/2048.png" alt="Image du projet 2048">
                 </div>
@@ -82,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="project">
+            <div class="project slide-in slide-in-right">
                 <div class="project-image">
                     <img src="../images/portfolio.jpg" alt="Image du projet Portfolio">
                 </div>
