@@ -8,6 +8,47 @@
     <link rel="stylesheet" href="../style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slideElements = document.querySelectorAll('.slide-in');
+
+        const handleScroll = () => {
+            slideElements.forEach((el) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); 
+
+        const toggleLanguageButton = document.getElementById('toggle-language');
+        const cvLink = document.querySelector('.cta-button');
+        const cvImage = document.querySelector('.cv-image img');
+
+        toggleLanguageButton.addEventListener('click', () => {
+            const isFrench = toggleLanguageButton.dataset.language === 'fr';
+
+            if (isFrench) {
+                cvLink.href = "../docs/CV WYBON VICTOR EN.pdf";
+                cvLink.textContent = 'Download my CV';
+                cvImage.src = "../images/CV WYBON VICTOR EN.png";
+                cvImage.alt = 'Preview of my CV in English';
+                toggleLanguageButton.textContent = 'Version française';
+                toggleLanguageButton.dataset.language = 'en';
+            } else {
+                cvLink.href = "../docs/CV WYBON VICTOR.pdf";
+                cvLink.textContent = 'Télécharger mon CV';
+                cvImage.src = "../images/CV WYBON VICTOR.png";
+                cvImage.alt = 'Aperçu de mon CV en français';
+                toggleLanguageButton.textContent = 'English version';
+                toggleLanguageButton.dataset.language = 'fr';
+            }
+        });
+    });
+</script>
 <body>
     <header>
         <nav>
@@ -28,44 +69,17 @@
             <p>Téléchargez mon CV en cliquant ci-dessous !</p>
             <br>
             <a href="../docs/CV WYBON VICTOR.pdf" download class="cta-button">Télécharger le CV</a>
+            <br><br>
+            <button id="toggle-language" data-language="fr" class="cta-button">English version</button>
             <div class="cv-image">
                 <img src="../images/CV WYBON VICTOR.png" alt="Aperçu de mon CV en français" class="illustration">
             </div>
             <br>
-            <button id="toggle-language" data-language="fr">Switch to English version</button>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 - WYBON Victor - Retrouvez-moi sur <a href="https://github.com/VictorWbn" target="_blank">GitHub</a> et <a href="https://www.linkedin.com/in/wybon-victor/" target="_blank">LinkedIn</a> !</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggleLanguageButton = document.getElementById('toggle-language');
-            const cvLink = document.querySelector('.cta-button');
-            const cvImage = document.querySelector('.cv-image img');
-
-            toggleLanguageButton.addEventListener('click', () => {
-                const isFrench = toggleLanguageButton.dataset.language === 'fr';
-
-                if (isFrench) {
-                    cvLink.href = "../docs/CV WYBON VICTOR EN.pdf";
-                    cvLink.textContent = 'Download my CV';
-                    cvImage.src = "../images/CV WYBON VICTOR EN.png";
-                    cvImage.alt = 'Preview of my CV in English';
-                    toggleLanguageButton.textContent = 'Changer en version française';
-                    toggleLanguageButton.dataset.language = 'en';
-                } else {
-                    cvLink.href = "../docs/CV WYBON VICTOR.pdf";
-                    cvLink.textContent = 'Télécharger mon CV';
-                    cvImage.src = "../images/CV WYBON VICTOR.png";
-                    cvImage.alt = 'Aperçu de mon CV en français';
-                    toggleLanguageButton.textContent = 'Switch to English version';
-                    toggleLanguageButton.dataset.language = 'fr';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
