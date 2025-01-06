@@ -4,51 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../images/icon.png">
-    <title>CV - Portfolio</title>
+    <title>Projets - Portfolio</title>
     <link rel="stylesheet" href="../style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const slideElements = document.querySelectorAll('.slide-in');
-
-        const handleScroll = () => {
-            slideElements.forEach((el) => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    el.classList.add('visible');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); 
-
-        const toggleLanguageButton = document.getElementById('toggle-language');
-        const cvLink = document.querySelector('.cta-button');
-        const cvImage = document.querySelector('.cv-image img');
-
-        toggleLanguageButton.addEventListener('click', () => {
-            const isFrench = toggleLanguageButton.dataset.language === 'fr';
-
-            if (isFrench) {
-                cvLink.href = "../docs/CV WYBON VICTOR EN.pdf";
-                cvLink.textContent = 'Download my CV';
-                cvImage.src = "../images/CV WYBON VICTOR EN.png";
-                cvImage.alt = 'Preview of my CV in English';
-                toggleLanguageButton.textContent = 'Version française';
-                toggleLanguageButton.dataset.language = 'en';
-            } else {
-                cvLink.href = "../docs/CV WYBON VICTOR.pdf";
-                cvLink.textContent = 'Télécharger mon CV';
-                cvImage.src = "../images/CV WYBON VICTOR.png";
-                cvImage.alt = 'Aperçu de mon CV en français';
-                toggleLanguageButton.textContent = 'English version';
-                toggleLanguageButton.dataset.language = 'fr';
-            }
-        });
-    });
-</script>
 <body>
     <header>
         <nav>
@@ -64,22 +23,103 @@
     </header>
 
     <main>
-        <section class="cv slide-in slide-in-right">
-            <h1>Curriculum Vitæ</h1>
-            <p>Téléchargez mon CV en cliquant ci-dessous !</p>
-            <br>
-            <a href="../docs/CV WYBON VICTOR.pdf" download class="cta-button">Télécharger le CV</a>
-            <br><br>
-            <button id="toggle-language" data-language="fr" class="cta-button">English version</button>
-            <div class="cv-image">
-                <img src="../images/CV WYBON VICTOR.png" alt="Aperçu de mon CV en français" class="illustration">
+        <section class="projects">
+            <h1>Mes Projets</h1>
+            <p>Voici une sélection de mes projets, réalisés dans le cadre de mes études et en dehors :</p>
+
+            <div class="project">
+                <div class="project-image">
+                    <img src="../images/Gems&Stones.png" alt="Image du projet Gems&Stones">
+                </div>
+                <div class="project-details">
+                    <h2 class="project-title">Projet Gems&Stones</h2>
+                    <p><strong>Technologies :</strong> Flask, Python, SQL, HTML/CSS, JavaScript</p>
+                    <p>Projet Flask visant à offrir une alternative à Numento (application de gestion de collection), avec une application permettant de lister une collection de minéraux et de fossiles.</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://github.com/VictorWbn/Gems-Stones" target="_blank" class="cta-button">GitHub</a>
+                </div>
             </div>
-            <br>
+
+            <div class="project">
+                <div class="project-image">
+                    <img src="../images/WINTER1944.png" alt="Image du projet WINTER 1944">
+                </div>
+                <div class="project-details">
+                    <h2 class="project-title">WINTER 1944</h2>
+                    <p><strong>Technologies :</strong> Java</p>
+                    <p>Durant le premier semestre du BUT Informatique, j'ai développé le célèbre jeu du "Chameau" (<a href="https://github.com/VictorWbn/Chameau-Game" target="_blank">GitHub jeu du chameau</a>). Pour me familiariser davantage avec le langage Java, j’ai créé une version alternative du jeu, centrée sur la Seconde Guerre mondiale.</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://github.com/VictorWbn/Winter1944" target="_blank" class="cta-button">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-image">
+                    <img src="../images/puissance4.jpg" alt="Image du projet Puissance 4">
+                </div>
+                <div class="project-details">
+                    <h2 class="project-title">Puissance 4</h2>
+                    <p><strong>Technologies :</strong> Java, JavaFX, Modèle MVC</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://github.com/VictorWbn/FourInALine" target="_blank" class="cta-button">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-image">
+                    <img src="../images/2048.png" alt="Image du projet 2048">
+                </div>
+                <div class="project-details">
+                    <h2 class="project-title">2048</h2>
+                    <p><strong>Technologies :</strong> Java, JavaFX, Modèle MVC</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://github.com/VictorWbn/2048" target="_blank" class="cta-button">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-image">
+                    <img src="../images/portfolio.jpg" alt="Image du projet Portfolio">
+                </div>
+                <div class="project-details">
+                    <h2 class="project-title">Portfolio</h2>
+                    <p><strong>Technologies :</strong> HTML, CSS</p>
+                    <p>Site Web statique sur OVH dédié à l'hébergement de mon Portfolio.</p>
+                </div>
+                <div class="project-link">
+                    <a href="https://github.com/VictorWbn/WYBON-VICTOR-PORTFOLIO" target="_blank" class="cta-button">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-image">
+                    <img src="../images/Raspberry.png" alt="Logo Raspberry">
+                </div>
+                <div class="project-details">
+                    <h2 class="project-title">Surveillance Impression 3D</h2>
+                    <p><strong>Technologies :</strong> Raspberry Pi ZERO 2W, Bash, Python, Pi OS Lite</p>
+                    <p>Utilisé pour surveiller, à l'aide d'une caméra, les impressions 3D de mon imprimante 3D Dagoma.</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 - WYBON Victor - Retrouvez-moi sur <a href="https://github.com/VictorWbn" target="_blank">GitHub</a> et <a href="https://www.linkedin.com/in/wybon-victor/" target="_blank">LinkedIn</a> !</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const projects = document.querySelectorAll('.project');
+            projects.forEach((project, index) => {
+                project.style.transitionDelay = `${index * 0.2}s`;
+                project.classList.add('visible');
+            });
+        });
+    </script>
 </body>
 </html>
